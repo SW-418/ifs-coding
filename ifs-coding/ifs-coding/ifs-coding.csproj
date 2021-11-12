@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>ifs_coding</RootNamespace>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Question2" />
+      <Folder Include="Question3" />
+      <Folder Include="Question4" />
+      <Folder Include="Question5" />
+    </ItemGroup>
+
+</Project>
