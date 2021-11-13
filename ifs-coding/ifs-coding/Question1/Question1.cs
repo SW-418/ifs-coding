@@ -20,7 +20,7 @@ namespace ifs_coding.Question1
 
             foreach (var character in input)
             {
-                var i = character switch
+                _ = character switch
                 {
                     '(' => currentFloor++,
                     ')' => currentFloor--,
