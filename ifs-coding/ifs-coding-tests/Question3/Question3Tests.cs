@@ -115,6 +115,25 @@ namespace ifs_coding_tests.Question3
             Assert.Equal(0, result);
         }
 
+        [Fact]
+        public void FindGoodStrings_HandlesProvidedTestCasesAsExpected()
+        {
+            var input = new List<string>
+            {
+                "aaa",
+                "jchzalrnumimnmhp",
+                "haegwjzuvuyypxyu",
+                "dvszwmarrgswjxmb"
+            };
+            
+            SetupFileReaderMock(input);
+            var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
+            
+            var result = sut.FindGoodStrings(DUMMY_FILE);
+            
+            Assert.Equal(1, result);
+        }
+
         private void SetupFileReaderMock(IEnumerable<string> expectedResponse)
         {
             _fileReaderMock.Setup(x => x
