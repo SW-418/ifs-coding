@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Question5" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Update="Question1\Question1.cs">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Compile>
@@ -37,6 +33,7 @@
       <Content Include="Question1\question01_input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <None Remove="Question5\question05_input2.txt" />
     </ItemGroup>
 
 </Project>

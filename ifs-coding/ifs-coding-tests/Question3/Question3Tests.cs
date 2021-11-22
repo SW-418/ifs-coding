@@ -7,7 +7,7 @@ namespace ifs_coding_tests.Question3
 {
     public class Question3Tests
     {
-        private const string DUMMY_FILE = "dummy-file.txt";
+        private const string DummyFile = "dummy-file.txt";
         private readonly Mock<IFileReader> _fileReaderMock;
 
         public Question3Tests()
@@ -21,7 +21,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(new List<string>());
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(0, result);
         }
@@ -38,7 +38,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(0, result);
         }
@@ -56,7 +56,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(input.Count, result);
         }
@@ -74,7 +74,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(0, result);
         }
@@ -92,7 +92,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(input.Count, result);
         }
@@ -110,7 +110,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(0, result);
         }
@@ -129,7 +129,7 @@ namespace ifs_coding_tests.Question3
             SetupFileReaderMock(input);
             var sut = new ifs_coding.Question3.Question3(_fileReaderMock.Object);
             
-            var result = sut.FindGoodStrings(DUMMY_FILE);
+            var result = sut.FindGoodStrings(DummyFile);
             
             Assert.Equal(1, result);
         }
@@ -137,7 +137,7 @@ namespace ifs_coding_tests.Question3
         private void SetupFileReaderMock(IEnumerable<string> expectedResponse)
         {
             _fileReaderMock.Setup(x => x
-                    .ReadMultiLineFile(DUMMY_FILE))
+                    .ReadMultiLineFile(DummyFile))
                 .Returns(expectedResponse);
         }
     }
